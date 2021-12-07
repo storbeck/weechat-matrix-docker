@@ -1,0 +1,6 @@
+version: 'X'
+services:
+  weechat:
+    build: ~/apps/weechat
+    env_file:
+      - .env  
