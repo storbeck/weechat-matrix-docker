@@ -44,5 +44,5 @@ RUN git clone $CONFIG_REPO $HOME/configs && \
     rsync -zav $HOME/configs/weechat/* $HOME/.weechat/ && \
     rm -rf $HOME/configs
 
-ENTRYPOINT [ "weechat" ]
+ENTRYPOINT [ "/bin/bash" ]
 
