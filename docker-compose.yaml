@@ -3,5 +3,7 @@ version: '3'
 services:
   matrix:
     build: ./weechat
+    environment:
+      - TERM=xterm-256color
     volumes: 
       - ./conf/matrix.conf:/home/chat/.weechat/matrix.conf

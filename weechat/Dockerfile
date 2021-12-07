@@ -17,6 +17,7 @@ RUN apt-get update -y; apt-get install -q -y \
   weechat-python \
   weechat-perl \
   rsync \
+  vim \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* \
   && rm -fr /root/.cache
@@ -44,5 +45,5 @@ RUN git clone $CONFIG_REPO $HOME/configs && \
     rsync -zav $HOME/configs/weechat/* $HOME/.weechat/ && \
     rm -rf $HOME/configs
 
-ENTRYPOINT [ "/bin/bash" ]
+ENTRYPOINT [ "weechat" ]
 
