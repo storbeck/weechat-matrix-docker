@@ -19,7 +19,7 @@ matrix_org.password = "--- replace me ---""
 ```
 
 **(Optional) Custom weechat configurations**
-If you want to use your own .weechat config files, change the `CONFIG_REPO` variable in the docker-compose.yml file.
+If you want to use your own .weechat config files, change the `CONFIG_REPO` env variable in `weechat/Dockerfile`.
 
 **Run**
 To run matrix execute the command:

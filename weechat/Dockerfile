@@ -1,6 +1,7 @@
 FROM debian:testing-slim
 
 ENV HOME /home/chat
+ENV CONFIG_REPO https://github.com/storbeck/configs.git
 
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
 RUN apt-get update -y; apt-get install -q -y \
