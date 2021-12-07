@@ -39,9 +39,9 @@ RUN mkdir -p .weechat/python/autoload && \
     ln -s $HOME/.weechat/python/matrix.py $HOME/.weechat/python/autoload/ 
 
 # overlay my configs
-RUN git clone https://github.com/storbeck/configs.git $HOME/configs && \
+RUN git clone $CONFIG_REPO $HOME/configs && \
     rsync -zav $HOME/configs/weechat/* $HOME/.weechat/ && \
     rm -rf $HOME/configs
 
-ENTRYPOINT [ "/bin/bash" ]
+ENTRYPOINT [ "weechat" ]
 

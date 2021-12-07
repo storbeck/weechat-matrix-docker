@@ -1,6 +1,9 @@
-version: 'X'
+version: '3'
+
 services:
-  weechat:
-    build: ~/apps/weechat
-    env_file:
-      - .env  
+  matrix:
+    build: ./weechat
+    volumes:
+      - ./secrets/matrix.conf:/home/chat/.weechat/matrix.conf
+    enviroment:
+      - CONFIG_REPO=https://github.com/storbeck/configs.git
