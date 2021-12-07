@@ -4,4 +4,4 @@ services:
   matrix:
     build: ./weechat
     volumes: 
-      - ./secrets/matrix.conf:/home/chat/.weechat/matrix.conf
+      - ./conf/matrix.conf:/home/chat/.weechat/matrix.conf
