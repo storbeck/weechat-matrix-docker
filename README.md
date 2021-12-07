@@ -1,12 +1,7 @@
 # Setup
-Guide to setting up various apps in Docker
+Guide to setting up weechat-matrix in a docker container
 
-**Build the image**
-```
-$ docker-compose build
-```
-
-## Matrix (weechat)
+## Configure
 To connect to matrix, I am using weechat with the matrix plugin. It's currently running
 off the Debian image because I wasn't able to find libolm-dev on alpine which I would have preferred.
 
@@ -27,7 +22,12 @@ matrix_org.password = "--- replace me ---""
 ### (Optional) Custom weechat configurations
 If you want to use your own .weechat config files, change the `CONFIG_REPO` env variable in `weechat/Dockerfile`.
 
-### Run
+## Build
+```
+$ docker-compose build
+```
+
+## Run
 To run matrix execute the command:
 ```bash
 $ docker-compose run matrix
