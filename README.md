@@ -1,6 +1,11 @@
 # Setup
 Guide to setting up various apps in Docker
 
+**Build the image**
+```
+$ docker-compose build
+```
+
 ## Matrix (weechat)
 To connect to matrix, I am using weechat with the matrix plugin. It's currently running
 off the Debian image because I wasn't able to find libolm-dev on alpine which I would have preferred.
